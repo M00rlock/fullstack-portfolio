@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import "./contact-form.css";
 
 type RequestState = "idle" | "loading" | "success" | "error";
 
@@ -81,9 +82,8 @@ export function ContactForm() {
           id="projectType"
           name="projectType"
           required
-          className="w-full rounded-lg border border-slate-600 bg-slate-900/70 px-3 py-2 text-slate-100 outline-none focus:border-cyan-300"
+          className="custom-select w-full cursor-pointer rounded-lg border border-slate-600 bg-slate-900/70 px-3 py-2 text-slate-100 outline-none focus:border-cyan-300"
         >
-          <option value="">Оберіть</option>
           <option value="mvp">MVP</option>
           <option value="legacy-migration">Legacy migration</option>
           <option value="team-augmentation">Підсилення команди</option>
@@ -99,9 +99,8 @@ export function ContactForm() {
           id="budget"
           name="budget"
           required
-          className="w-full rounded-lg border border-slate-600 bg-slate-900/70 px-3 py-2 text-slate-100 outline-none focus:border-cyan-300"
+          className="custom-select w-full cursor-pointer rounded-lg border border-slate-600 bg-slate-900/70 px-3 py-2 text-slate-100 outline-none focus:border-cyan-300"
         >
-          <option value="">Оберіть</option>
           <option value="up-to-2k">до $2k</option>
           <option value="2k-5k">$2k - $5k</option>
           <option value="5k-15k">$5k - $15k</option>
