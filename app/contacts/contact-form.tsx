@@ -50,38 +50,38 @@ export function ContactForm() {
   return (
     <form onSubmit={onSubmit} className="space-y-4">
       <div>
-        <label htmlFor="name" className="mb-1 block text-sm font-medium text-slate-800">
+        <label htmlFor="name" className="mb-1 block text-sm font-medium text-slate-200">
           Ім&apos;я
         </label>
         <input
           id="name"
           name="name"
           required
-          className="w-full rounded-lg border border-slate-300 px-3 py-2 outline-none focus:border-slate-500"
+          className="w-full rounded-lg border border-slate-600 bg-slate-900/70 px-3 py-2 text-slate-100 outline-none focus:border-cyan-300"
         />
       </div>
 
       <div>
-        <label htmlFor="contact" className="mb-1 block text-sm font-medium text-slate-800">
+        <label htmlFor="contact" className="mb-1 block text-sm font-medium text-slate-200">
           Контакт (email/Telegram)
         </label>
         <input
           id="contact"
           name="contact"
           required
-          className="w-full rounded-lg border border-slate-300 px-3 py-2 outline-none focus:border-slate-500"
+          className="w-full rounded-lg border border-slate-600 bg-slate-900/70 px-3 py-2 text-slate-100 outline-none focus:border-cyan-300"
         />
       </div>
 
       <div>
-        <label htmlFor="projectType" className="mb-1 block text-sm font-medium text-slate-800">
+        <label htmlFor="projectType" className="mb-1 block text-sm font-medium text-slate-200">
           Тип задачі
         </label>
         <select
           id="projectType"
           name="projectType"
           required
-          className="w-full rounded-lg border border-slate-300 px-3 py-2 outline-none focus:border-slate-500"
+          className="w-full rounded-lg border border-slate-600 bg-slate-900/70 px-3 py-2 text-slate-100 outline-none focus:border-cyan-300"
         >
           <option value="">Оберіть</option>
           <option value="mvp">MVP</option>
@@ -92,14 +92,14 @@ export function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="budget" className="mb-1 block text-sm font-medium text-slate-800">
+        <label htmlFor="budget" className="mb-1 block text-sm font-medium text-slate-200">
           Бюджет
         </label>
         <select
           id="budget"
           name="budget"
           required
-          className="w-full rounded-lg border border-slate-300 px-3 py-2 outline-none focus:border-slate-500"
+          className="w-full rounded-lg border border-slate-600 bg-slate-900/70 px-3 py-2 text-slate-100 outline-none focus:border-cyan-300"
         >
           <option value="">Оберіть</option>
           <option value="up-to-2k">до $2k</option>
@@ -110,7 +110,7 @@ export function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="details" className="mb-1 block text-sm font-medium text-slate-800">
+        <label htmlFor="details" className="mb-1 block text-sm font-medium text-slate-200">
           Коротко про задачу
         </label>
         <textarea
@@ -118,14 +118,14 @@ export function ContactForm() {
           name="details"
           rows={4}
           required
-          className="w-full rounded-lg border border-slate-300 px-3 py-2 outline-none focus:border-slate-500"
+          className="w-full rounded-lg border border-slate-600 bg-slate-900/70 px-3 py-2 text-slate-100 outline-none focus:border-cyan-300"
         />
       </div>
 
       <button
         type="submit"
         disabled={state === "loading"}
-        className="rounded-lg bg-slate-900 px-5 py-3 text-sm font-medium text-white hover:bg-slate-700 disabled:cursor-not-allowed disabled:bg-slate-500"
+        className="rounded-lg bg-cyan-400 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300 disabled:cursor-not-allowed disabled:bg-slate-500"
       >
         {state === "loading" ? "Надсилаю..." : "Надіслати заявку"}
       </button>
