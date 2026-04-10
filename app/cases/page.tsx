@@ -39,8 +39,8 @@ export default function CasesPage() {
   return (
     <div className="space-y-10">
       <header>
-        <h1 className="text-3xl font-semibold text-slate-950">Кейси</h1>
-        <p className="mt-3 max-w-3xl text-slate-700">
+        <h1 className="text-3xl font-semibold text-slate-100">Кейси</h1>
+        <p className="mt-3 max-w-3xl text-slate-300">
           Формат кожного кейсу: проблема, підхід, результат. За потреби під NDA готую
           детальнішу технічну версію на дзвінку.
         </p>
@@ -48,15 +48,15 @@ export default function CasesPage() {
 
       <section className="grid gap-4">
         {cases.map((item) => (
-          <article key={item.title} className="rounded-xl border border-slate-200 bg-white p-6">
-            <h2 className="text-xl font-semibold text-slate-950">{item.title}</h2>
-            <p className="mt-3 text-slate-800">
+          <article key={item.title} className="glass rounded-xl p-6">
+            <h2 className="text-xl font-semibold text-cyan-300">{item.title}</h2>
+            <p className="mt-3 text-slate-200">
               <span className="font-medium">Проблема:</span> {item.challenge}
             </p>
-            <p className="mt-2 text-slate-800">
+            <p className="mt-2 text-slate-200">
               <span className="font-medium">Рішення:</span> {item.solution}
             </p>
-            <p className="mt-2 text-slate-800">
+            <p className="mt-2 text-slate-200">
               <span className="font-medium">Результат:</span> {item.result}
             </p>
           </article>
@@ -65,7 +65,7 @@ export default function CasesPage() {
 
       <Link
         href="/contacts"
-        className="inline-block rounded-lg bg-slate-900 px-5 py-3 text-sm font-medium text-white hover:bg-slate-700"
+        className="inline-block rounded-lg bg-cyan-400 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300"
       >
         Хочу схоже рішення
       </Link>

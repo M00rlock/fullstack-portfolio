@@ -45,8 +45,8 @@ export default function ServicesPage() {
   return (
     <div className="space-y-10">
       <header>
-        <h1 className="text-3xl font-semibold text-slate-950">Послуги</h1>
-        <p className="mt-3 max-w-3xl text-slate-700">
+        <h1 className="text-3xl font-semibold text-slate-100">Послуги</h1>
+        <p className="mt-3 max-w-3xl text-slate-300">
           Працюю зі стартапами, яким важливі швидкість запуску, технічна якість і
           передбачуваний результат.
         </p>
@@ -54,9 +54,9 @@ export default function ServicesPage() {
 
       <section className="grid gap-4 md:grid-cols-2">
         {services.map((service) => (
-          <article key={service.title} className="rounded-xl border border-slate-200 bg-white p-6">
-            <h2 className="text-xl font-semibold text-slate-950">{service.title}</h2>
-            <ul className="mt-4 space-y-2 text-slate-700">
+          <article key={service.title} className="glass rounded-xl p-6">
+            <h2 className="text-xl font-semibold text-cyan-300">{service.title}</h2>
+            <ul className="mt-4 space-y-2 text-slate-300">
               {service.points.map((point) => (
                 <li key={point}>- {point}</li>
               ))}
@@ -65,9 +65,9 @@ export default function ServicesPage() {
         ))}
       </section>
 
-      <section className="rounded-xl border border-slate-200 bg-white p-6">
-        <h2 className="text-xl font-semibold text-slate-950">Як проходить співпраця</h2>
-        <ol className="mt-4 space-y-2 text-slate-700">
+      <section className="glass neon-border rounded-xl p-6">
+        <h2 className="text-xl font-semibold text-slate-100">Як проходить співпраця</h2>
+        <ol className="mt-4 space-y-2 text-slate-300">
           <li>1. Короткий бриф: ціль, контекст, обмеження, дедлайн.</li>
           <li>2. Технічний план: scope, ризики, етапи, оцінка.</li>
           <li>3. Реалізація спринтами з регулярними демо.</li>
@@ -75,7 +75,7 @@ export default function ServicesPage() {
         </ol>
         <Link
           href="/contacts"
-          className="mt-6 inline-block rounded-lg bg-slate-900 px-5 py-3 text-sm font-medium text-white hover:bg-slate-700"
+          className="mt-6 inline-block rounded-lg bg-cyan-400 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300"
         >
           Обговорити ваш запит
         </Link>
