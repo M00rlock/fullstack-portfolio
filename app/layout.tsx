@@ -14,6 +14,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const buildVersion =
+  process.env.NEXT_PUBLIC_BUILD_VERSION ??
+  process.env.VERCEL_GIT_COMMIT_SHA?.slice(0, 7) ??
+  "local";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://portfolio-site.example"),
   title: {
@@ -65,7 +70,7 @@ export default function RootLayout({
         <footer className="border-t border-slate-200 bg-white">
           <div className="mx-auto flex w-full max-w-6xl flex-col gap-2 px-6 py-6 text-sm text-slate-600 sm:flex-row sm:items-center sm:justify-between">
             <p>ФОП Oleksandr Vasyliev, комп&apos;ютерне програмування</p>
-            <p>Львів, Україна · Remote</p>
+            <p>Львів, Україна · Remote · v. {buildVersion}</p>
           </div>
         </footer>
       </body>
