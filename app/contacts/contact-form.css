@@ -1,0 +1,9 @@
+#budget,
+#projectType {
+  cursor: pointer;
+}
+
+#budget option,
+#projectType option {
+  cursor: pointer;
+}
